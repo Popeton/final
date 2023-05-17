@@ -14,9 +14,4 @@ public class Key : MonoBehaviour
             door.Unlock(this);
         }
     }
-
-    private void Start()
-    {
-        
-    }
 }

@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     public List<Key> keys; // lista de llaves
     private bool isOpen = false; // indica si la puerta está abierta
 
+    [SerializeField] Animator animator;
     void Start()
     {
         // Selecciona aleatoriamente una llave como la correcta
@@ -37,8 +38,7 @@ public class Door : MonoBehaviour
 
     void UnlockDoor()
     {
-        print("a");
-        door.SendMessage("Open");
+        animator.SetBool("unlock", true);
         
     }
 }
