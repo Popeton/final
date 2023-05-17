@@ -11,7 +11,9 @@ public class Key : MonoBehaviour
         Door door = other.GetComponent<Door>();
         if (door != null)
         {
+            
             door.Unlock(this);
+            this.gameObject.SetActive(false);
         }
     }
 }
