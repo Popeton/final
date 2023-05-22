@@ -5,12 +5,14 @@ using UnityEngine;
 public class NextZone : MonoBehaviour
 {
     [SerializeField] Transform newzone,vrtk;
-    private void OnTriggerEnter(Collider other)
+   
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             vrtk.position = newzone.position;
-            other.gameObject.SetActive(false);
+            collision.gameObject.SetActive(false);
         }
     }
 }
